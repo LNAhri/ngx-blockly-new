@@ -1,6 +1,6 @@
 # NGX-Blockly-New
 
-An angular wrapper for google's blockly. This time with Angular v16 Support
+An angular wrapper for google's blockly. This time with Angular v19 Support
 
 ## Setup
 
