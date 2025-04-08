@@ -23,9 +23,10 @@ import { phpGenerator } from 'blockly/php';
 import { pythonGenerator } from 'blockly/python';
 
 @Component({
-  selector: 'ngx-blockly',
-  templateUrl: './ngx-blockly.component.html',
-  styleUrls: ['./ngx-blockly.component.css']
+    selector: 'ngx-blockly',
+    templateUrl: './ngx-blockly.component.html',
+    styleUrls: ['./ngx-blockly.component.css'],
+    standalone: false
 })
 export class NgxBlocklyComponent implements OnInit, AfterViewInit, OnChanges, OnDestroy {
 

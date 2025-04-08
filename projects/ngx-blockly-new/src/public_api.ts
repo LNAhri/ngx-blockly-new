@@ -6,9 +6,9 @@ import * as Blockly from 'blockly/core';
 export { Blockly };
 
 // Locales
-import * as EN from 'blockly/msg/en';
+import * as MSG from 'blockly/msg/en';
 
-Blockly.setLocale(EN);
+Blockly.setLocale(MSG as any);
 
 export * from './lib/ngx-blockly/ngx-blockly.component';
 export * from './lib/ngx-blockly/ngx-blockly.config';
@@ -25,13 +25,3 @@ export * from './lib/ngx-blockly/models/node';
 export * from './lib/ngx-blockly/models/block-mutator';
 export * from './lib/ngx-blockly/plugins/ngx-blockly.toolbox';
 export * from './lib/ngx-blockly.module';
-
-
-
-
-
-
-
-
-
-

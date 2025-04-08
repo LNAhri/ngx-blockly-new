@@ -1,5 +1,5 @@
 import { Blockly, BlockMutator } from 'dist/ngx-blockly-new';
-import { CustomMutator } from './custom-mutator';
+//import { CustomMutator } from './custom-mutator';
 
 export class ExampleMutator extends BlockMutator {
 
@@ -32,9 +32,9 @@ export class ExampleMutator extends BlockMutator {
         console.log('saveConnections');
     }
 
-    afterBlockInit(block: any) {
-        console.log('afterBlockInit');
-        block.setMutator(new CustomMutator(block));
+    afterBlockInit(block: Blockly.Block) {
+        console.log('afterBlockInit', block);
+        //block.setMutator(new CustomMutator(block, null));
     }
 
     loadExtraState(state: any): any {

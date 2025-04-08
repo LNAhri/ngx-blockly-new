@@ -24,7 +24,8 @@ import { ExampleBlock } from './blocks/example.block';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements AfterViewInit {
 
@@ -63,11 +64,10 @@ export class AppComponent implements AfterViewInit {
         move: {
             scrollbars: true,
             wheel: true
-        }
-
-        // plugins: {
-        //     'toolbox': NgxBlocklyToolbox
-        // },
+        },
+        plugins: {
+            //'toolbox': NgxBlocklyToolbox
+        },
 
     };
 
@@ -87,33 +87,13 @@ export class AppComponent implements AfterViewInit {
             new Separator(),
             VARIABLES_CATEGORY,
             FUNCTIONS_CATEGORY,
-            LOGIC_CATEGORY,
-            new Category('bla', '#ff0000', [...this.customBlocks, this.button, this.label]),
-            LOOP_CATEGORY,
-            MATH_CATEGORY,
-            TEXT_CATEGORY,
-            LISTS_CATEGORY,
-            COLOUR_CATEGORY,
-            new Separator(),
-            VARIABLES_CATEGORY,
-            FUNCTIONS_CATEGORY,
-            LOGIC_CATEGORY,
-            new Category('bla', '#ff0000', [...this.customBlocks, this.button, this.label]),
-            LOOP_CATEGORY,
-            MATH_CATEGORY,
-            TEXT_CATEGORY,
-            LISTS_CATEGORY,
-            COLOUR_CATEGORY,
-            new Separator(),
-            VARIABLES_CATEGORY,
-            FUNCTIONS_CATEGORY
         ];
         this.config.toolbox = toolbox.toXML();
     }
 
     ngAfterViewInit(): void {
-        // Blockly.Variables.createVariable(this.blocklyComponent.workspace, null, 'asdasd');
-        // this.blocklyComponent.workspace.createVariable('asdads', null, null);
+        //Blockly.Variables.createVariable(this.blocklyComponent.workspace, null, 'asdasd');
+        this.blocklyComponent.workspace.createVariable('asdads', null, null);
     }
 
     onCode(code: string) {

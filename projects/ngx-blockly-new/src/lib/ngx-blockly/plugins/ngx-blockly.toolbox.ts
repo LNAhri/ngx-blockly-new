@@ -1,6 +1,6 @@
 import { UUID } from 'angular2-uuid';
 import * as Blockly from 'blockly/core';
-import { ICollapsibleToolboxItem, ToolboxCategory } from 'blockly/blockly';
+import { ICollapsibleToolboxItem, ToolboxCategory } from 'blockly';
 import { Node } from '../models/node';
 
 export class NgxBlocklyToolbox extends Blockly.Toolbox {
